@@ -22,8 +22,10 @@ int main() {
 		cislo = cisla[i];
 		pocet[cislo]++;
 	}
-	for (int i = 0; i < 10; i++) printf("Cislo %d je v souboru %dx\n", i, pocet[i]);
-
+	
+		for (int i = 0; i < 10; i++) {
+			if (pocet[i] != 0) printf("Cislo %d je v souboru %d\n", i, pocet[i]);
+		}
 
 	if (fclose(soubor) == EOF) {
 		printf("Chyba: Soubor se nepodarilo zavrit.\n");
